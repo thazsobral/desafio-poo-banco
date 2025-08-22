@@ -1,11 +1,14 @@
 package entities;
 
-public class ContaPoupanca {
-    private int agencia;
-    private int numero;
-    private double saldo;
+public class ContaPoupanca extends Conta {
+    public ContaPoupanca(Cliente cliente) {
+        super(cliente);
+        //TODO Auto-generated constructor stub
+    }
 
-    public void sacar(){}
-
-    public void depositar(){}
+    @Override
+    public void imprimirExtrato() {
+        System.out.printf("==== Extrato Conta Poupanca ====\n");
+        super.imprimirExtrato();
+    }
 }

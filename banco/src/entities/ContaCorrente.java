@@ -1,13 +1,13 @@
 package entities;
 
-public class ContaCorrente {
-    private int agencia;
-    private int numero;
-    private double saldo;
+public class ContaCorrente extends Conta {
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
+    }
 
-    public void sacar(){}
-
-    public void depositar(){}
-
-    public void transferir(){}
+    @Override
+    public void imprimirExtrato() {
+        System.out.printf("==== Extrato Conta Corrent ====\n");
+        super.imprimirExtrato();
+    }
 }
